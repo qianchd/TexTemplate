@@ -1,0 +1,90 @@
+% \documentclass[11pt, draft]{article}
+\documentclass[12pt]{article}
+\linespread{1.5}
+
+% \usepackage{fullpage}  % Set all page margins to 1.5cm
+%\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}  % Flexible and complete interface to document dimensions
+
+\usepackage{indentfirst}  % Indent first paragraph after section header
+
+% \usepackage[round]{natbib}
+\usepackage[round, sort, authoryear]{natbib}  % Flexible bibliography support
+%\usepackage[square,numbers]{natbib}
+\usepackage{hyperref}
+
+\usepackage[dvipsnames,svgnames]{xcolor}
+\usepackage{color}
+\usepackage{tcolorbox}
+
+
+\input{header.tex}
+\IfFileExists{./color.tex}{\input{color.tex}}{}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{prop}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{condition}{Condition}[section]
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\def\Lbar{\overline{\mathcal{L}}}
+\def\hM{\widehat{\mathcal{M}}}
+\def\cv{\mathsf{cv}}
+\def\cf{\mathsf{cf}}
+\def\rf{\mathsf{rf}}
+\def\m{\mathsf{m}}
+\def\cvr{\mathsf{cvr}}
+\def\snr{\mathsf{snr}}
+\def\hb{\widehat{\bbeta}}
+\def\a{\alpha}
+
+% \def\btau{\boldsymbol{\tau}}
+% \def\balpha{\boldsymbol{\alpha}}
+
+% \newcommand{\blue}[1]{{\color{blue}{#1}}}
+% \newcommand{\red}[1]{{\color{red}{#1}}}
+
+% \usepackage{multibib}
+% \newcites{supp}{Supplementary References}
+
+% \usepackage{threeparttable}
+% \usepackage{makecell}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
+% \usepackage[title]{appendix}
+
+\begin{document}
+\title{Changepoint Detection in High-dimensional: Cross-fitting is Needed}
+\author{}
+\date{\today}
+
+\maketitle
+
+% \begin{abstract}
+
+% \end{abstract}
+
+\subsection*{CHECKLIST}
+\begin{itemize}
+    \tightlist
+    \item[\checked] 
+    \item[\failed] 
+    \item[\unchecked] 
+\end{itemize}
+
+\section{Introduction}\label{sec:intro}
+
+\bibliographystyle{rss}
+\bibliography{ref.bib}
+
+\newpage
+\appendix
+
+\end{document}

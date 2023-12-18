@@ -1,0 +1,374 @@
+%% Useful packages
+
+% \usepackage{emptypage}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{bbm}
+\usepackage{mathrsfs}
+\usepackage{bm}
+\usepackage{enumerate}
+
+\usepackage{booktabs}  %  引入三线表宏包
+
+
+%% fonts 
+% \usepackage[english]{babel}
+% \usepackage[utf8x]{inputenc}
+% \usepackage[T1]{fontenc}
+% \usepackage{fontspec}
+% \setmainfont{Times New Roman}
+% \usepackage{charter}
+% \usepackage{mathpazo}
+% \usepackage{pxfonts}
+
+% \usepackage{fourier}
+% \usepackage{fouriernc}
+% \usepackage{cmbright}
+% \usepackage{iwona}
+
+%% graphic
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{tikz}
+\usepackage{multirow}
+%\usepackage{flowchart}
+%\usepackage{tikz,mathpazo}
+%\usetikzlibrary{shapes, geometric, arrows}
+
+% \usepackage{witharrows} % aligned env with arrows
+
+%\usepackage{geometry}
+
+
+%%%% mathbf
+\newcommand{\abf}{\mathbf{a}}
+\newcommand{\Abf}{\mathbf{A}}
+\newcommand{\bbf}{\mathbf{b}}
+\newcommand{\Bbf}{\mathbf{B}}
+\newcommand{\cbf}{\mathbf{c}}
+\newcommand{\Cbf}{\mathbf{C}}
+\newcommand{\dbf}{\mathbf{d}}
+\newcommand{\Dbf}{\mathbf{D}}
+\newcommand{\ebf}{\mathbf{e}}
+\newcommand{\Ebf}{\mathbf{E}}
+\newcommand{\fbf}{\mathbf{f}}
+\newcommand{\Fbf}{\mathbf{F}}
+\newcommand{\gbf}{\mathbf{g}}
+\newcommand{\Gbf}{\mathbf{G}}
+\newcommand{\hbf}{\mathbf{h}}
+\newcommand{\Hbf}{\mathbf{H}}
+\newcommand{\ibf}{\mathbf{i}}
+\newcommand{\Ibf}{\mathbf{I}}
+\newcommand{\jbf}{\mathbf{j}}
+\newcommand{\Jbf}{\mathbf{J}}
+\newcommand{\kbf}{\mathbf{k}}
+\newcommand{\Kbf}{\mathbf{K}}
+\newcommand{\lbf}{\mathbf{l}}
+\newcommand{\Lbf}{\mathbf{L}}
+\newcommand{\mbf}{\mathbf{m}}
+\newcommand{\Mbf}{\mathbf{M}}
+\newcommand{\nbf}{\mathbf{n}}
+\newcommand{\Nbf}{\mathbf{N}}
+\newcommand{\obf}{\mathbf{o}}
+\newcommand{\Obf}{\mathbf{O}}
+\newcommand{\pbf}{\mathbf{p}}
+\newcommand{\Pbf}{\mathbf{P}}
+\newcommand{\qbf}{\mathbf{q}}
+\newcommand{\Qbf}{\mathbf{Q}}
+\newcommand{\rbf}{\mathbf{r}}
+\newcommand{\Rbf}{\mathbf{R}}
+\newcommand{\sbf}{\mathbf{s}}
+\newcommand{\Sbf}{\mathbf{S}}
+\newcommand{\tbf}{\mathbf{t}}
+\newcommand{\Tbf}{\mathbf{T}}
+\newcommand{\ubf}{\mathbf{u}}
+\newcommand{\Ubf}{\mathbf{U}}
+\newcommand{\vbf}{\mathbf{v}}
+\newcommand{\Vbf}{\mathbf{V}}
+\newcommand{\wbf}{\mathbf{w}}
+\newcommand{\Wbf}{\mathbf{W}}
+\newcommand{\xbf}{\mathbf{x}}
+\newcommand{\Xbf}{\mathbf{X}}
+\newcommand{\ybf}{\mathbf{y}}
+\newcommand{\Ybf}{\mathbf{Y}}
+\newcommand{\zbf}{\mathbf{z}}
+\newcommand{\Zbf}{\mathbf{Z}}
+
+\newcommand{\abb}{\mathbb{a}}
+\newcommand{\Abb}{\mathbb{A}}
+\newcommand{\bbb}{\mathbb{b}}
+%\newcommand{\Bbb}{\mathbb{B}}
+\newcommand{\cbb}{\mathbb{c}}
+\newcommand{\Cbb}{\mathbb{C}}
+\newcommand{\dbb}{\mathbb{d}}
+\newcommand{\Dbb}{\mathbb{D}}
+\newcommand{\ebb}{\mathbb{e}}
+\newcommand{\Ebb}{\mathbb{E}}
+\newcommand{\fbb}{\mathbb{f}}
+\newcommand{\Fbb}{\mathbb{F}}
+\newcommand{\gbb}{\mathbb{g}}
+\newcommand{\Gbb}{\mathbb{G}}
+\newcommand{\hbb}{\mathbb{h}}
+\newcommand{\Hbb}{\mathbb{H}}
+\newcommand{\ibb}{\mathbb{i}}
+\newcommand{\Ibb}{\mathbb{I}}
+\newcommand{\jbb}{\mathbb{j}}
+\newcommand{\Jbb}{\mathbb{J}}
+\newcommand{\kbb}{\mathbb{k}}
+\newcommand{\Kbb}{\mathbb{K}}
+\newcommand{\lbb}{\mathbb{l}}
+\newcommand{\Lbb}{\mathbb{L}}
+\newcommand{\mbb}{\mathbb{m}}
+\newcommand{\Mbb}{\mathbb{M}}
+\newcommand{\nbb}{\mathbb{n}}
+\newcommand{\Nbb}{\mathbb{N}}
+\newcommand{\obb}{\mathbb{o}}
+\newcommand{\Obb}{\mathbb{O}}
+\newcommand{\pbb}{\mathbb{p}}
+\newcommand{\Pbb}{\mathbb{P}}
+\newcommand{\qbb}{\mathbb{q}}
+\newcommand{\Qbb}{\mathbb{Q}}
+\newcommand{\rbb}{\mathbb{r}}
+\newcommand{\Rbb}{\mathbb{R}}
+\newcommand{\sbb}{\mathbb{s}}
+\newcommand{\Sbb}{\mathbb{S}}
+\newcommand{\tbb}{\mathbb{t}}
+\newcommand{\Tbb}{\mathbb{T}}
+\newcommand{\ubb}{\mathbb{u}}
+\newcommand{\Ubb}{\mathbb{U}}
+\newcommand{\vbb}{\mathbb{v}}
+\newcommand{\Vbb}{\mathbb{V}}
+\newcommand{\wbb}{\mathbb{w}}
+\newcommand{\Wbb}{\mathbb{W}}
+\newcommand{\xbb}{\mathbb{x}}
+\newcommand{\Xbb}{\mathbb{X}}
+\newcommand{\ybb}{\mathbb{y}}
+\newcommand{\Ybb}{\mathbb{Y}}
+\newcommand{\zbb}{\mathbb{z}}
+\newcommand{\Zbb}{\mathbb{Z}}
+
+
+
+
+
+\newcommand{\acal}{\mathcal{a}}
+\newcommand{\Acal}{\mathcal{A}}
+\newcommand{\bcal}{\mathcal{b}}
+\newcommand{\Bcal}{\mathcal{B}}
+\newcommand{\ccal}{\mathcal{c}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\dcal}{\mathcal{d}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\ecal}{\mathcal{e}}
+\newcommand{\Ecal}{\mathcal{E}}
+\newcommand{\fcal}{\mathcal{f}}
+\newcommand{\Fcal}{\mathcal{F}}
+\newcommand{\gcal}{\mathcal{g}}
+\newcommand{\Gcal}{\mathcal{G}}
+\newcommand{\hcal}{\mathcal{h}}
+\newcommand{\Hcal}{\mathcal{H}}
+\newcommand{\ical}{\mathcal{i}}
+\newcommand{\Ical}{\mathcal{I}}
+\newcommand{\jcal}{\mathcal{j}}
+\newcommand{\Jcal}{\mathcal{J}}
+\newcommand{\kcal}{\mathcal{k}}
+\newcommand{\Kcal}{\mathcal{K}}
+\newcommand{\lcal}{\mathcal{l}}
+\newcommand{\Lcal}{\mathcal{L}}
+\newcommand{\mcal}{\mathcal{m}}
+\newcommand{\Mcal}{\mathcal{M}}
+\newcommand{\ncal}{\mathcal{n}}
+\newcommand{\Ncal}{\mathcal{N}}
+\newcommand{\ocal}{\mathcal{o}}
+\newcommand{\Ocal}{\mathcal{O}}
+\newcommand{\pcal}{\mathcal{p}}
+\newcommand{\Pcal}{\mathcal{P}}
+\newcommand{\qcal}{\mathcal{q}}
+\newcommand{\Qcal}{\mathcal{Q}}
+\newcommand{\rcal}{\mathcal{r}}
+\newcommand{\Rcal}{\mathcal{R}}
+\newcommand{\scal}{\mathcal{s}}
+\newcommand{\Scal}{\mathcal{S}}
+\newcommand{\tcal}{\mathcal{t}}
+\newcommand{\Tcal}{\mathcal{T}}
+\newcommand{\ucal}{\mathcal{u}}
+\newcommand{\Ucal}{\mathcal{U}}
+\newcommand{\vcal}{\mathcal{v}}
+\newcommand{\Vcal}{\mathcal{V}}
+\newcommand{\wcal}{\mathcal{w}}
+\newcommand{\Wcal}{\mathcal{W}}
+\newcommand{\xcal}{\mathcal{x}}
+\newcommand{\Xcal}{\mathcal{X}}
+\newcommand{\ycal}{\mathcal{y}}
+\newcommand{\Ycal}{\mathcal{Y}}
+\newcommand{\zcal}{\mathcal{z}}
+\newcommand{\Zcal}{\mathcal{Z}}
+
+
+\newcommand{\Fscr}{\mathscr{F}}
+\newcommand{\Dscr}{\mathscr{D}}
+\newcommand{\Mscr}{\mathscr{M}}
+
+\newcommand{\mubf}{\boldsymbol{\mu}}
+\newcommand{\bbeta}{\boldsymbol{\beta}}
+\newcommand{\bdelta}{\boldsymbol{\delta}}
+\newcommand{\btheta}{\boldsymbol{\theta}}
+
+\newcommand{\It}{\widetilde{I}}
+\newcommand{\kmax}{\overline{\kappa}}
+\newcommand{\kmin}{\underline{\kappa}}
+
+%+ Renewcommand symbols
+\newcommand{\ud}{\mathrm{d}} % differential sign
+\newcommand{\Id}{\mathbb{I}}
+\newcommand{\Pa}{\mathcal{P}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Rext}{\R\cup\{+\infty\}}
+\newcommand{\barR}{[-\infty, \infty]}
+\newcommand{\tnorm}[1]{\vert\!\Vert#1\vert\!\Vert}
+\newcommand{\inprod}[1]{\left\langle#1\right\rangle}
+\newcommand{\arrow}[1]{\stackrel{\rightarrow}{#1}}
+\newcommand{\rmnum}[1]{\romannumeral#1}
+\newcommand{\Rmnum}[1]{\uppercase\expandafter{\romannumeral#1}}
+
+%\newcommand{\epi}[1]{\mathrm{epi}\left(#1\right)}
+\newcommand{\Eproof}{\hfill $\square$}
+\newcommand{\prox}{\mathrm{prox}}
+\newcommand{\proj}{\mathrm{proj}}
+%\newcommand{\argmin}{\mathrm{arg}\!\min}
+\newcommand{\dom}[1]{\mathrm{dom}(#1)}
+\newcommand{\pen}{\mathrm{pen}}
+\newcommand{\zero}[0]{\boldsymbol{0}}
+
+
+%\newcommand{\id}[1]{%
+%   {\mathchoice{\boldsymbol{1}_{\left\{ #1 \right\}}}{\boldsymbol{1}\{#1\}}{\boldsymbol{1}\{#1\}}{\boldsymbol{1}\{#1\}}}
+%}
+
+%\newcommand{\dx}[1][]{%
+%   \ifthenelse{ \equal{#1}{} }
+%      {\ensuremath{\;\mathrm{d}x}}
+%      {\ensuremath{\;\mathrm{d}#1}}
+%}
+
+
+\newcommand{\set}[1]{\{#1\}}
+\newcommand{\bigset}[1]{\bigl\{#1\bigr\}}
+\newcommand{\Bigset}[1]{\Bigl\{#1\Bigr\}}
+\newcommand{\biggset}[1]{\biggl\{#1\biggr\}}
+\newcommand{\Biggset}[1]{\Biggl\{#1\Biggr\}}
+
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\bignorm}[1]{\bigl\lVert #1\bigr\rVert}
+\newcommand{\Bignorm}[1]{\Bigl\lVert #1\Bigr\rVert}
+\newcommand{\biggnorm}[1]{\biggl\lVert#1\biggr\rVert}
+\newcommand{\Biggnorm}[1]{\Biggl\lVert#1\Biggr\rVert}
+
+\newcommand{\abs}[1]{|#1|}
+\newcommand{\bigabs}[1]{\bigl| #1\bigr|}
+\newcommand{\Bigabs}[1]{\Bigl| #1\Bigr|}
+\newcommand{\biggabs}[1]{\biggl|#1\biggr|}
+\newcommand{\Biggabs}[1]{\Biggl|#1\Biggr|}
+
+% \newcommand{\set}[1]{
+%    { \mathchoice{\left\{#1\right\}}{\{#1\}}{\{#1\}}{\{#1\}} }
+% }
+%\newcommand{\prob}[1]{
+%    { \mathchoice{\mathbb{P}\left[#1\right]}{\mathbb{P}[#1]}{\mathbb{P}[#1]}{\mathbb{P}[#1]} }
+%}
+
+%\newcommand{\expect}[1]{
+%    { \mathchoice{\mathbb{E}\left[#1\right]}{\mathbb{E}[#1]}{\mathbb{E}[#1]}{\mathbb{E}[#1]} }
+%}
+
+% \newcommand{\norm}[1]{
+%    { \mathchoice{\left\Vert#1\right\Vert}{\Vert#1\Vert}{\Vert#1\Vert}{\Vert#1\Vert} }
+% }
+
+% \newcommand{\abs}[1]{
+%    {\mathchoice{\left\vert#1\right\vert}{\vert#1\vert}{\vert#1\vert}{\vert#1\vert}}
+% }
+
+%\newcommand{\size}[1]{
+%    { \mathchoice{\left\vert#1\right\vert}{\vert#1\vert}{\vert#1\vert}{\vert#1\vert} }
+%}
+
+\newcommand{\size}[1]{\vert#1\vert}
+% \newcommand{\abs}[1]{\vert#1\vert}
+% \newcommand{\norm}[1]{\lVert#1\rVert}
+% \newcommand{\set}[1]{\{#1\}}
+\newcommand{\id}{\boldsymbol{1}}
+
+\newcommand{\dd}{\mathrm{d}}
+\DeclareMathOperator*{\argmin}{\mathrm{arg\,min}}
+\DeclareMathOperator*{\argmax}{\mathrm{arg\,max}}
+\DeclareMathOperator*{\Var}{\mathrm{Var}}
+\DeclareMathOperator*{\Cov}{\mathrm{Cov}}
+\DeclareMathOperator*{\TV}{\mathrm{TV}}
+\DeclareMathOperator*{\sign}{\mathrm{sign}}
+\DeclareMathOperator*{\supp}{\mathrm{supp}}
+\DeclareMathOperator*{\op}{\mathrm{op}}
+\DeclareMathOperator*{\tr}{\mathrm{tr}}
+\DeclareMathOperator*{\rel}{\mathrm{r}}
+\DeclareMathOperator*{\diag}{\mathrm{diag}}
+\DeclareMathOperator*{\kl}{\mathrm{KL}}
+%\DeclareMathOperator*{\inf}{inf}
+%\DeclareMathOperator*{\sup}{sup}
+
+% colors
+% \newcommand{\deprecated}[1]{{\color{red}#1}}
+\newcommand{\red}[1]{{\color{red}#1}}
+\newcommand{\blue}[1]{{\color{blue}#1}}
+\newcommand{\fcolor}[2]{{\color{#1}#2}}
+
+% temp command
+\newcommand{\todo}{\textbf{todo: }}
+\newcommand{\supvd}{\sup_{\vbf \in \Scal^{d-1}}}
+\newcommand{\infvd}{\inf_{\vbf \in \Scal^{d-1}}}
+\newcommand{\maxvd}{\max_{\vbf \in \Scal^{d-1}}}
+\newcommand{\minvd}{\min_{\vbf \in \Scal^{d-1}}}
+\newcommand{\zcbf}{\bar{\mathbf{z}}}
+\newcommand{\z}{\mathbf{z}}
+\newcommand{\zt}{\tilde{\mathbf{z}}}
+\newcommand{\ve}{\varepsilon}
+
+\newcommand{\truecps}{\Tcal^\ast}
+\newcommand{\estcps}{\widehat{\Tcal}}
+\newcommand{\cpsset}{\Tcal}
+
+
+
+\usepackage{geometry}
+\definecolor{lightblue}{RGB}{0, 200, 200}
+
+% for todo checklist
+\usepackage{pifont}
+\newcommand{\checked}{\rlap{\raisebox{0.3ex}{\hspace{-0.5ex} \ding{51}}}$\square$}
+\newcommand{\unchecked}{$\square$}
+\newcommand{\failed}{\rlap{\raisebox{0.3ex}{\hspace{-0.5ex} \ding{55}}}$\square$}
+\newcommand{\workon}{\rlap{\raisebox{0.3ex}{\hspace{-0.6ex} \ding{45}}}$\square$}
+\providecommand{\tightlist}{
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\itemindent}{1pt}
+}
+
+\newcommand{\mypageset}{
+    \geometry{
+        paperwidth=7.0in,
+        paperheight=9.2in,
+        left=1mm,
+        right=3mm,
+        top=5mm,
+        bottom=5mm,
+        %heightrounded,% better use it
+    }
+    \usepackage{kurier}
+    \linespread{1}
+}

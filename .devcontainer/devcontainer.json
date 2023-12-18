@@ -1,0 +1,800 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/ubuntu
+{
+	"name": "weblatex",
+	"image": "danteev/texlive:latest", // https://github.com/dante-ev/docker-texlive
+	"remoteUser": "root", // Do not change this
+	"features": {},
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"cSpell.userWords": [
+					"Adaboost",
+					"ADMM",
+					"argmax",
+					"ASDP",
+					"Benjamini",
+					"Borel",
+					"boundedness",
+					"Boundness",
+					"boxplot",
+					"boxplots",
+					"Bregman",
+					"Chambolle",
+					"Changepoint",
+					"changepoints",
+					"Chengde",
+					"Chernoff's",
+					"Cont'd",
+					"coordinatewise",
+					"Corrollary",
+					"covariate",
+					"covariates",
+					"Cramer",
+					"Dantzig",
+					"Dataset",
+					"datasets",
+					"Doob's",
+					"Esseen",
+					"exchangeablity",
+					"Fenchel",
+					"Frobenius",
+					"glmnet",
+					"hashrate",
+					"heatmap",
+					"Heatmaps",
+					"Hochberg",
+					"Hoeffding",
+					"Hoeffding's",
+					"hyperparameters",
+					"infima",
+					"infimum",
+					"integrable",
+					"invariance",
+					"Kolmogorov",
+					"Kullback",
+					"Leibler",
+					"Lipschitz",
+					"Majorize",
+					"Matlab",
+					"minorant",
+					"misspecified",
+					"MSMM",
+					"MSVM",
+					"multicategory",
+					"multinomial",
+					"multiset",
+					"Nankai",
+					"Nesterov",
+					"NMCD",
+					"nonconvex",
+					"nonnegative",
+					"nonsmooth",
+					"optimality",
+					"orthonormal",
+					"pdflatex",
+					"perceptron",
+					"Qian",
+					"quantile",
+					"rademacher",
+					"repeatly",
+					"RMSMM",
+					"RMSVM",
+					"segmentations",
+					"semidefinite",
+					"Slutsky's",
+					"solardark",
+					"solu",
+					"sparsifying",
+					"subdifferential",
+					"subgaussian",
+					"subgradient",
+					"subgradients",
+					"suboptimal",
+					"subproblem",
+					"subproblems",
+					"subsequence",
+					"supermartingale",
+					"suprema",
+					"Talagrand's",
+					"thresholding",
+					"UMVUE",
+					"vectorization",
+					"vectorizing",
+					"Wilcoxon",
+					"Wilks",
+					"xelatex"
+				],
+				"editor.wordWrap": "on",
+				"latex-workshop.latex.tools": [
+					{
+						"name": "xelatex",
+						"command": "xelatex",
+						"args": [
+							"-synctex=1",
+							"-interaction=nonstopmode",
+							"-file-line-error",
+							"%DOC%"
+						]
+					},
+					{
+						"name": "pdflatex",
+						"command": "pdflatex",
+						"args": [
+							"-synctex=1",
+							"-interaction=nonstopmode",
+							"-shell-escape",
+							"-file-line-error",
+							"%DOC%"
+						]
+					},
+					{
+						"name": "platex-ng",
+						"command": "platex-ng",
+						"args": [
+							"-synctex=1",
+							"-shell-escape",
+							"D",
+							"-file-line-error",
+							"%DOC%"
+						]
+					},
+					{
+						"name": "xelatex-escape-shell",
+						"command": "xelatex",
+						"args": [
+							"-synctex=1",
+							"-interaction=nonstopmode",
+							"-file-line-error",
+							"–shell-escape",
+							"%DOC%"
+						]
+					},
+					{
+						"name": "bibtex",
+						"command": "bibtex",
+						"args": [
+							"%DOCFILE%"
+						]
+					}
+				],
+				"latex-workshop.latex.recipes": [
+					{
+						"name": "PDFLaTeX",
+						"tools": [
+							"pdflatex"
+						]
+					},
+					{
+						"name": "XeLaTeX",
+						"tools": [
+							"xelatex"
+						]
+					},
+					{
+						"name": "pdflatex -> bibtex -> pdflatex*2",
+						"tools": [
+							"pdflatex",
+							"bibtex",
+							"pdflatex",
+							"pdflatex"
+						]
+					},
+					{
+						"name": "xe -> bib -> xe*2",
+						"tools": [
+							"xelatex",
+							"bibtex",
+							"xelatex",
+							"xelatex"
+						]
+					},
+					{
+						"name": "ptex",
+						"tools": [
+							"platex-ng"
+						]
+					},
+					{
+						"name": "xe -> bib -> xe*2 - escape-shell",
+						"tools": [
+							"xelatex-escape-shell",
+							"bibtex",
+							"xelatex",
+							"xelatex-escape-shell"
+						]
+					},
+					{
+						"name": "XeLaTeX-escape-shell",
+						"tools": [
+							"xelatex-escape-shell"
+						]
+					},
+					{
+						"name": "latexmk",
+						"tools": [
+							"latexmk"
+						]
+					},
+					{
+						"name": "BibTeX",
+						"tools": [
+							"bibtex"
+						]
+					}
+				],
+				// "latex-workshop.view.pdf.viewer":"external",
+				"latex-workshop.view.pdf.ref.viewer": "tabOrBrowser",
+				"latex-workshop.view.pdf.zoom": "page-width",
+				"latex-workshop.latex.clean.fileTypes": [
+					"*.blg",
+					"*.log",
+					"*.idx",
+					"*.ind",
+					"*.lof",
+					"*.lot",
+					"*.toc",
+					"*.acn",
+					"*.acr",
+					"*.alg",
+					"*.glg",
+					"*.glo",
+					"*.gls",
+					"*.ist",
+					"*.fls",
+					"*.snm",
+					"*.nav",
+					"*.fdb_latexmk"
+				],
+				// Edit the following property to change export directory
+				"latex-workshop.latex.outDir": "./PDF",
+				"latex-workshop.latex.autoClean.run": "onFailed",
+				"latex-workshop.latex.build.forceRecipeUsage": false,
+				"latex-workshop.synctex.afterBuild.enabled": true,
+				"latex-workshop.view.pdf.viewer": "tab",
+				"latex-workshop.latex.clean.subfolder.enabled": true,
+				"latex-workshop.latex.magic.args": [
+					"-output-directory=PDF", // to change the output directory
+					"%DOC%"
+				],
+				// Remove / comment the next 3 lines to remove dark view for pdf
+				"latex-workshop.view.pdf.color.dark.pageColorsBackground": "#171717", // For Dark Viewwer
+				"latex-workshop.latex.autoBuild.run": "never",
+				"latex-workshop.view.pdf.color.dark.pageColorsForeground": "#FFFFFF", // For Dark Viewer
+				"latex-workshop.view.pdf.color.dark.backgroundColor": "#171717", // For Dark Viewer
+				"editor.formatOnSave": true,
+				"editor.scrollbar.verticalScrollbarSize": 6,
+				"latex-workshop.latex.pdfWatch.delay": 500,
+				//"latex-workshop.latex.watch.delay": 500, // Deprecated. See here: https://github.com/sanjib-sen/WebLaTex/issues/8
+				"latex-workshop.codespaces.portforwarding.openDelay": 20000,
+				"workbench.colorTheme": "Solarized Light+",
+				"settings.cycle": [
+					{
+						"id": "latexAutoBuild",
+						"values": [
+							{
+								"latex-workshop.latex.autoBuild.run": "never"
+							},
+							{
+								"latex-workshop.latex.autoBuild.run": "onFileChange"
+							}
+						]
+					},
+					{
+						"id": "lineNumbers",
+						"values": [
+							{
+								"editor.lineNumbers": "off"
+							},
+							{
+								"editor.lineNumbers": "on"
+							}
+						]
+					},
+					{
+						"id": "codeFolding",
+						"values": [
+							{
+								"editor.folding": true
+							},
+							{
+								"editor.folding": false
+							}
+						]
+					},
+					{
+						"id": "glyphMargin",
+						"values": [
+							{
+								"editor.glyphMargin": true
+							},
+							{
+								"editor.glyphMargin": false
+							}
+						]
+					},
+					{
+						"id": "pdfColor",
+						"values": [
+							{
+								"latex-workshop.view.pdf.color.light.pageColorsBackground": "#ffffff",
+								"latex-workshop.view.pdf.color.light.backgroundColor": "#ffffff"
+							},
+							{
+								"latex-workshop.view.pdf.color.light.pageColorsBackground": "#fdf6e3",
+								"latex-workshop.view.pdf.color.light.backgroundColor": "#fdf6e3"
+							}
+						]
+					}
+				],
+				"grammarly.files.include": [
+					"**/*.tex"
+				],
+				// Remove the following to check .md files with Grammarly.
+				"grammarly.files.exclude": [
+					"**/*.md"
+				],
+				"grammarly.selectors": [
+					{
+						"language": "latex",
+						"scheme": "file"
+					}
+				]
+			},
+			"keybindings": [
+				{
+					"key": "alt+-",
+					"command": "type",
+					"args": {
+						"text": " <- "
+					},
+					"when": "editorTextFocus && editorLangId == 'r' "
+				},
+				{
+					"key": "alt+-",
+					"command": "type",
+					"args": {
+						"text": " <- "
+					},
+					"when": "editorTextFocus && editorLangId == 'rmd' "
+				},
+				{
+					"key": "ctrl+alt+b",
+					"command": "workbench.action.tasks.build"
+				},
+				{
+					"key": "ctrl+shift+b",
+					"command": "-workbench.action.tasks.build"
+				},
+				{
+					"key": "shift+alt+b",
+					"command": "workbench.action.toggleSidebarVisibility"
+				},
+				{
+					"key": "ctrl+b",
+					"command": "-workbench.action.toggleSidebarVisibility"
+				},
+				{
+					"key": "ctrl+b",
+					"command": "latex-workshop.build",
+					"when": "editorTextFocus && !latex-workshop:altkeymap"
+				},
+				{
+					"key": "ctrl+alt+b",
+					"command": "-latex-workshop.build",
+					"when": "editorTextFocus && !latex-workshop:altkeymap"
+				},
+				{
+					"key": "ctrl+r",
+					"command": "-workbench.action.openRecent"
+				},
+				{
+					"key": "ctrl+r",
+					"command": "-workbench.action.reloadWindow",
+					"when": "isDevelopment"
+				},
+				{
+					"key": "ctrl+alt+a",
+					"command": "workbench.action.quickOpenNavigateNextInRecentFilesPicker",
+					"when": "inQuickOpen && inRecentFilesPicker"
+				},
+				{
+					"key": "ctrl+r",
+					"command": "-workbench.action.quickOpenNavigateNextInRecentFilesPicker",
+					"when": "inQuickOpen && inRecentFilesPicker"
+				},
+				{
+					"key": "ctrl+r",
+					"command": "latex-workshop.recipes"
+				},
+				{
+					"key": "ctrl+k ctrl+o",
+					"command": "-workbench.action.files.openLocalFolder",
+					"when": "remoteFileDialogVisible && remoteFileDialogVisible"
+				},
+				{
+					"key": "ctrl+o",
+					"command": "workbench.action.files.openFile"
+				},
+				{
+					"key": "ctrl+o",
+					"command": "-workbench.action.files.openFile"
+				},
+				{
+					"key": "ctrl+o",
+					"command": "-workbench.action.files.openLocalFile",
+					"when": "remoteFileDialogVisible && remoteFileDialogVisible"
+				},
+				{
+					"key": "ctrl+alt+v",
+					"command": "latex-workshop.tab",
+					"when": "editorTextFocus && editorLangId == 'latex'"
+				},
+				{
+					"key": "ctrl+alt+t",
+					"command": "workbench.action.selectTheme"
+				},
+				{
+					"key": "ctrl+k ctrl+t",
+					"command": "-workbench.action.selectTheme"
+				},
+				{
+					"key": "ctrl+alt+r",
+					"command": "workbench.action.togglePanelPosition"
+				},
+				{
+					"key": "ctrl+n ctrl+b",
+					"command": "markdown.extension.printToHtml"
+				},
+				{
+					"key": "ctrl+shift+j",
+					"command": "-workbench.action.search.toggleQueryDetails",
+					"when": "searchViewletVisible"
+				},
+				{
+					"key": "shift+alt+j",
+					"command": "workbench.action.togglePanel"
+				},
+				{
+					"key": "ctrl+j",
+					"command": "-workbench.action.togglePanel"
+				},
+				{
+					"key": "ctrl+shift+i",
+					"command": "editor.toggleFold",
+					"when": "editorTextFocus && foldingEnabled"
+				},
+				{
+					"key": "ctrl+k ctrl+l",
+					"command": "-editor.toggleFold",
+					"when": "editorTextFocus && foldingEnabled"
+				},
+				{
+					"key": "ctrl+shift+i",
+					"command": "-workbench.action.toggleDevTools",
+					"when": "isDevelopment"
+				},
+				{
+					"key": "shift+alt+a",
+					"command": "workbench.action.toggleActivityBarVisibility"
+				},
+				{
+					"key": "ctrl+alt+l",
+					"command": "extension.jumpy-line"
+				},
+				{
+					"key": "ctrl+alt+k",
+					"command": "editor.action.insertCursorAbove",
+					"when": "editorTextFocus"
+				},
+				{
+					"key": "ctrl+alt+up",
+					"command": "-editor.action.insertCursorAbove",
+					"when": "editorTextFocus"
+				},
+				{
+					"key": "ctrl+alt+down",
+					"command": "editor.action.insertCursorBelow",
+					"when": "editorTextFocus"
+				},
+				{
+					"key": "ctrl+k n",
+					"command": "markdown-preview-enhanced.insertNewSlide",
+					"when": "editorLangId == 'markdown'"
+				},
+				{
+					"key": "shift+alt+s",
+					"command": "workbench.action.toggleStatusbarVisibility"
+				},
+				{
+					"key": "shift+alt+t",
+					"command": "workbench.action.toggleTabsVisibility"
+				},
+				{
+					"key": "shift+alt+x",
+					"command": "workbench.view.extensions"
+				},
+				{
+					"key": "ctrl+shift+x",
+					"command": "-workbench.view.extensions"
+				},
+				{
+					"key": "ctrl+oem_7",
+					"command": "editor.action.quickFix",
+					"when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+				},
+				{
+					"key": "ctrl+oem_period",
+					"command": "-editor.action.quickFix",
+					"when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+				},
+				{
+					"key": "shift+alt+m",
+					"command": "editor.action.toggleMinimap"
+				},
+				{
+					"key": "shift+alt+u",
+					"command": "workbench.action.output.toggleOutput",
+					"when": "workbench.panel.output.active"
+				},
+				{
+					"key": "ctrl+shift+u",
+					"command": "-workbench.action.output.toggleOutput",
+					"when": "workbench.panel.output.active"
+				},
+				{
+					"key": "shift+alt+y",
+					"command": "workbench.debug.action.toggleRepl",
+					"when": "workbench.panel.repl.view.active"
+				},
+				{
+					"key": "ctrl+shift+y",
+					"command": "-workbench.debug.action.toggleRepl",
+					"when": "workbench.panel.repl.view.active"
+				},
+				{
+					"key": "shift+alt+a",
+					"command": "-editor.action.blockComment",
+					"when": "editorTextFocus && !editorReadonly"
+				},
+				{
+					"key": "shift+alt+p",
+					"command": "workbench.actions.view.problems",
+					"when": "workbench.panel.markers.view.active"
+				},
+				{
+					"key": "ctrl+shift+m",
+					"command": "-workbench.actions.view.problems",
+					"when": "workbench.panel.markers.view.active"
+				},
+				{
+					"key": "ctrl+shift+o",
+					"command": "revealFileInOS",
+					"when": "!editorFocus"
+				},
+				{
+					"key": "shift+alt+r",
+					"command": "-revealFileInOS",
+					"when": "!editorFocus"
+				},
+				{
+					"key": "ctrl+shift+g",
+					"command": "-workbench.view.scm",
+					"when": "workbench.scm.active"
+				},
+				{
+					"key": "ctrl+shift+g",
+					"command": "workbench.action.gotoSymbol"
+				},
+				{
+					"key": "ctrl+shift+o",
+					"command": "-workbench.action.gotoSymbol"
+				},
+				{
+					"key": "shift+alt+r",
+					"command": "breadcrumbs.toggle"
+				},
+				{
+					"key": "shift+l",
+					"command": "-notebook.toggleLineNumbers",
+					"when": "notebookEditorFocused && !inputFocus"
+				},
+				{
+					"key": "ctrl+alt+e",
+					"command": "cursorBottom",
+					"when": "textInputFocus"
+				},
+				{
+					"key": "ctrl+end",
+					"command": "-cursorBottom",
+					"when": "textInputFocus"
+				},
+				{
+					"key": "ctrl+alt+j",
+					"command": "latex-workshop.synctex",
+					"when": "editorTextFocus && !config.latex-workshop.bind.altKeymap.enabled && !virtualWorkspace && editorLangId == 'latex'"
+				},
+				{
+					"key": "ctrl+alt+j",
+					"command": "-latex-workshop.synctex",
+					"when": "editorTextFocus && !config.latex-workshop.bind.altKeymap.enabled && !virtualWorkspace && editorLangId == 'latex'"
+				},
+				{
+					"key": "ctrl+alt+n",
+					"command": "latex-workshop.synctex",
+					"when": "config.latex-workshop.bind.altKeymap.enabled && editorTextFocus && !virtualWorkspace && editorLangId == 'latex'"
+				},
+				{
+					"key": "ctrl+l alt+j",
+					"command": "-latex-workshop.synctex",
+					"when": "config.latex-workshop.bind.altKeymap.enabled && editorTextFocus && !virtualWorkspace && editorLangId == 'latex'"
+				},
+				{
+					"key": "shift+alt+w",
+					"command": "latex-workshop.openMathPreviewPanel"
+				},
+				{
+					"key": "ctrl+alt+m",
+					"command": "latex-workshop.toggleMathPreviewPanel",
+					"when": "!config.latex-workshop.bind.altKeymap.enabled && editorLangId =~ /^latex$|^latex-expl3$|^rsweave$|^jlweave$/"
+				},
+				{
+					"key": "shift+alt+g",
+					"command": "workbench.view.scm"
+				},
+				{
+					"key": "shift+alt+e",
+					"command": "workbench.view.explorer",
+					"when": "viewContainer.workbench.view.explorer.enabled"
+				},
+				{
+					"key": "ctrl+shift+e",
+					"command": "-workbench.view.explorer",
+					"when": "viewContainer.workbench.view.explorer.enabled"
+				},
+				{
+					"key": "shift+alt+l",
+					"command": "settings.cycle.lineNumbers",
+					"when": "editorFocus"
+				},
+				{
+					"key": "shift+alt+f",
+					"command": "settings.cycle.codeFolding",
+					"when": "editorFocus"
+				},
+				{
+					"key": "shift+alt+k",
+					"command": "settings.cycle.glyphMargin",
+					"when": "editorFocus"
+				},
+				{
+					"key": "shift+alt+c",
+					"command": "settings.cycle.pdfColor",
+					"when": "editorFocus"
+				},
+				{
+					"key": "ctrl+alt+f",
+					"command": "notebook.formatCell",
+					"when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
+				},
+				{
+					"key": "shift+alt+f",
+					"command": "-notebook.formatCell",
+					"when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
+				},
+				{
+					"key": "ctrl+alt+f",
+					"command": "editor.action.formatDocument",
+					"when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+				},
+				{
+					"key": "shift+alt+f",
+					"command": "-editor.action.formatDocument",
+					"when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+				},
+				{
+					"key": "ctrl+alt+f",
+					"command": "editor.action.formatDocument.none",
+					"when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+				},
+				{
+					"key": "shift+alt+f",
+					"command": "-editor.action.formatDocument.none",
+					"when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+				},
+				{
+					"key": "ctrl+alt+f",
+					"command": "notebook.format",
+					"when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
+				},
+				{
+					"key": "shift+alt+f",
+					"command": "-notebook.format",
+					"when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
+				},
+				{
+					"key": "ctrl+alt+f",
+					"command": "filesExplorer.findInFolder",
+					"when": "explorerResourceIsFolder && explorerViewletVisible && filesExplorerFocus && !inputFocus"
+				},
+				{
+					"key": "shift+alt+f",
+					"command": "-filesExplorer.findInFolder",
+					"when": "explorerResourceIsFolder && explorerViewletVisible && filesExplorerFocus && !inputFocus"
+				},
+				{
+					"key": "ctrl+alt+f",
+					"command": "search.action.restrictSearchToFolder",
+					"when": "folderMatchWithResourceFocus && searchViewletVisible"
+				},
+				{
+					"key": "shift+alt+f",
+					"command": "-search.action.restrictSearchToFolder",
+					"when": "folderMatchWithResourceFocus && searchViewletVisible"
+				},
+				{
+					"key": "shift+alt+c",
+					"command": "-copyFilePath",
+					"when": "!editorFocus"
+				},
+				{
+					"key": "shift+alt+c",
+					"command": "-copyFilePath",
+					"when": "editorFocus"
+				},
+				{
+					"key": "shift+alt+c",
+					"command": "-search.action.copyPath",
+					"when": "fileMatchOrFolderMatchWithResourceFocus"
+				},
+				{
+					"key": "ctrl+shift+n",
+					"command": "welcome.showNewFileEntries"
+				},
+				{
+					"key": "ctrl+alt+win+n",
+					"command": "-welcome.showNewFileEntries"
+				},
+				{
+					"key": "win+n",
+					"command": "workbench.action.newWindow"
+				},
+				{
+					"key": "ctrl+shift+n",
+					"command": "-workbench.action.newWindow"
+				},
+				{
+					"key": "ctrl+alt+s",
+					"command": "settings.cycle.latexAutoBuild"
+				},
+				{
+					"key": "alt+s",
+					"command": "latex-workshop.build",
+					"when": "!config.latex-workshop.bind.altKeymap.enabled && !virtualWorkspace && editorLangId =~ /^latex$|^latex-expl3$|^rsweave$|^jlweave$|^pweave$/"
+				},
+				{
+					"key": "ctrl+alt+b",
+					"command": "-latex-workshop.build",
+					"when": "!config.latex-workshop.bind.altKeymap.enabled && !virtualWorkspace && editorLangId =~ /^latex$|^latex-expl3$|^rsweave$|^jlweave$|^pweave$/"
+				},
+				{
+					"key": "ctrl+alt+p",
+					"command": "git.commitAll"
+				}
+			],
+			"extensions": [
+				"James-Yu.latex-workshop",
+				"ryanolsonx.solarized",
+				"streetsidesoftware.code-spell-checker",
+				"hoovercj.vscode-settings-cycler",
+				//"GitHub.copilot",
+				// Remove the line below if you do not want Live-Collaboration Feature
+				//"ms-vsliveshare.vsliveshare",
+				// Uncomment the line below if you do not want LanguageTool Support
+				"valentjn.vscode-ltex",
+				// Remove the line below if you do not want Grammarly
+				"znck.grammarly"
+			]
+		}
+	}
+}

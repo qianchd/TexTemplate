@@ -1,0 +1,23 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "shift+alt+oem_period",
+        "command": "settings.cycle.pdfColor",
+        "when": "editorFocus && editorLangId == 'latex'"
+    },
+    {
+        "key": "shift+alt+oem_comma",
+        "command": "workbench.action.tasks.runTask",
+        "args": "setLatexColor",
+        "when": "editorFocus && editorLangId == 'latex'"
+    },
+    {
+        "key": "shift+alt+oem_period",
+        "command": "-editor.action.autoFix",
+        "when": "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)quickfix\\b/"
+    },
+    {
+        "key": "ctrl+shift+oem_2",
+        "command": "editor.action.autoFix"
+    }
+]

@@ -1,115 +1,122 @@
 {
-    "settings.cycle": [
-        {
-          "id": "latexAutoBuild",
-          "values": [
-            {
-              "latex-workshop.latex.autoBuild.run": "never",
-            },
-            {
-              "latex-workshop.latex.autoBuild.run": "onFileChange",
-            }
-          ]
-        },
-        {
-          "id": "lineNumbers",
-          "values": [
-            {
-              "editor.lineNumbers": "off",
-            },
-            {
-              "editor.lineNumbers": "on",
-            }
-          ]
-        },
-        {
-          "id": "codeFolding",
-          "values": [
-            {
-              "editor.folding": true
-            },
-            {
-              "editor.folding": false
-            }
-          ]
-        },
-        {
-          "id": "glyphMargin",
-          "values": [
-            {
-              "editor.glyphMargin": true
-            },
-            {
-              "editor.glyphMargin": false
-            }
-          ]
-        },
-        {
-          "id": "pdfColor",
-          "values": [
-            {
-              "workbench.colorTheme": "GitHub Light",
-              // "latex-workshop.view.pdf.color.light.pageColorsBackground": "#ffffff",
-              "latex-workshop.view.pdf.color.light.backgroundColor": "#ffffff",
-              "latex-workshop.view.pdf.color.light.pageBorderColor": "000000"
-            },
-            {
-              "workbench.colorTheme": "Solarized Light",
-              // "latex-workshop.view.pdf.color.light.pageColorsBackground": "#fdf6e3",
-              "latex-workshop.view.pdf.color.light.backgroundColor": "#fdf6e3",
-              "latex-workshop.view.pdf.color.light.pageBorderColor": "000000"
-            },
-            {
-              "workbench.colorTheme": "Earthbound - Cave of the Past",
-              // "latex-workshop.view.pdf.color.light.pageColorsBackground": "#b0d0b8", // earthground
-              "latex-workshop.view.pdf.color.light.backgroundColor": "#b0d0b8",
-              "latex-workshop.view.pdf.color.light.pageBorderColor": "000000"
-            },
-            {
-              "workbench.colorTheme": "Earthbound - Magicant",
-              // "latex-workshop.view.pdf.color.light.pageColorsBackground": "#f9f8b9", // tokyonightlight
-              "latex-workshop.view.pdf.color.light.backgroundColor": "#f9f8b9",
-              "latex-workshop.view.pdf.color.light.pageBorderColor": "000000"
-            },
-            {
-              "workbench.colorTheme": "Eva Light Bold",
-              // "latex-workshop.view.pdf.color.light.pageColorsBackground": "#ebeef5", // evalight
-              "latex-workshop.view.pdf.color.light.backgroundColor": "#ebeef5",
-              "latex-workshop.view.pdf.color.light.pageBorderColor": "000000"
-            },
-            {
-              "workbench.colorTheme": "skyblue",
-              // "latex-workshop.view.pdf.color.light.pageColorsBackground": "#e7fce1", // cozygreen
-              "latex-workshop.view.pdf.color.light.backgroundColor": "#e7fce1",
-              "latex-workshop.view.pdf.color.light.pageBorderColor": "000000"
-            },
-            {
-              "workbench.colorTheme": "Tokyo Night Light",
-              // "latex-workshop.view.pdf.color.light.pageColorsBackground": "#d5d6db", // tokyonightlight
-              "latex-workshop.view.pdf.color.light.backgroundColor": "#d5d6db",
-              "latex-workshop.view.pdf.color.light.pageBorderColor": "000000"
-            },
-            {
-              "workbench.colorTheme": "Earthbound - Devil's Machine",
-              // "latex-workshop.view.pdf.color.light.pageColorsBackground": "#d5d6db", // Earthbound - Devil's Machine
-              "latex-workshop.view.pdf.color.dark.backgroundColor": "#040001", // Earthbound - Devil's Machine
-              "latex-workshop.view.pdf.color.light.backgroundColor": "#040001",
-              "latex-workshop.view.pdf.color.light.pageBorderColor": "#ffd6d6"
-            },
-            {
-              "workbench.colorTheme": "Earthbound - Dusty Dunes (Darker)",
-              // "latex-workshop.view.pdf.color.light.pageColorsBackground": "#d5d6db", // Earthbound - Devil's Machine
-              "latex-workshop.view.pdf.color.dark.backgroundColor": "#140f00", // Earthbound - Devil's Machine
-              "latex-workshop.view.pdf.color.light.backgroundColor": "#140f00",
-              "latex-workshop.view.pdf.color.light.pageBorderColor": "ffe89f"
-            },
-            {
-              "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
-              "latex-workshop.view.pdf.color.dark.backgroundColor": "#0d1117", // Github Dark Colorblind (Beta)
-              "latex-workshop.view.pdf.color.light.backgroundColor": "#0d1117",
-              "latex-workshop.view.pdf.color.light.pageBorderColor": "#c9e5fd"
-            }
-          ]
-        }
-      ]
+  "cSpell.words": [
+      "interpolatable",
+      "overfitting",
+      "overparameterized",
+      "ridgeless"
+  ],
+  "settings.cycle": [
+      {
+        "id": "latexAutoBuild",
+        "values": [
+          {
+            "latex-workshop.latex.autoBuild.run": "never",
+          },
+          {
+            "latex-workshop.latex.autoBuild.run": "onFileChange",
+          }
+        ]
+      },
+      {
+        "id": "lineNumbers",
+        "values": [
+          {
+            "editor.lineNumbers": "off",
+          },
+          {
+            "editor.lineNumbers": "on",
+          }
+        ]
+      },
+      {
+        "id": "codeFolding",
+        "values": [
+          {
+            "editor.folding": true
+          },
+          {
+            "editor.folding": false
+          }
+        ]
+      },
+      {
+        "id": "glyphMargin",
+        "values": [
+          {
+            "editor.glyphMargin": true
+          },
+          {
+            "editor.glyphMargin": false
+          }
+        ]
+      },
+      {
+        "id": "pdfColor",
+        "values": [
+          {
+            "workbench.colorTheme": "GitHub Light",
+            // "latex-workshop.view.pdf.color.light.pageColorsBackground": "#ffffff",
+            "latex-workshop.view.pdf.color.light.backgroundColor": "#ffffff",
+            "latex-workshop.view.pdf.color.light.pageBorderColor": "000000"
+          },
+          {
+            "workbench.colorTheme": "Solarized Light",
+            // "latex-workshop.view.pdf.color.light.pageColorsBackground": "#fdf6e3",
+            "latex-workshop.view.pdf.color.light.backgroundColor": "#fdf6e3",
+            "latex-workshop.view.pdf.color.light.pageBorderColor": "000000"
+          },
+          {
+            "workbench.colorTheme": "Earthbound - Cave of the Past",
+            // "latex-workshop.view.pdf.color.light.pageColorsBackground": "#b0d0b8", // earthground
+            "latex-workshop.view.pdf.color.light.backgroundColor": "#b0d0b8",
+            "latex-workshop.view.pdf.color.light.pageBorderColor": "000000"
+          },
+          {
+            "workbench.colorTheme": "Earthbound - Magicant",
+            // "latex-workshop.view.pdf.color.light.pageColorsBackground": "#f9f8b9", // tokyonightlight
+            "latex-workshop.view.pdf.color.light.backgroundColor": "#f9f8b9",
+            "latex-workshop.view.pdf.color.light.pageBorderColor": "000000"
+          },
+          {
+            "workbench.colorTheme": "Eva Light Bold",
+            // "latex-workshop.view.pdf.color.light.pageColorsBackground": "#ebeef5", // evalight
+            "latex-workshop.view.pdf.color.light.backgroundColor": "#ebeef5",
+            "latex-workshop.view.pdf.color.light.pageBorderColor": "000000"
+          },
+          {
+            "workbench.colorTheme": "skyblue",
+            // "latex-workshop.view.pdf.color.light.pageColorsBackground": "#e7fce1", // cozygreen
+            "latex-workshop.view.pdf.color.light.backgroundColor": "#e7fce1",
+            "latex-workshop.view.pdf.color.light.pageBorderColor": "000000"
+          },
+          {
+            "workbench.colorTheme": "Tokyo Night Light",
+            // "latex-workshop.view.pdf.color.light.pageColorsBackground": "#d5d6db", // tokyonightlight
+            "latex-workshop.view.pdf.color.light.backgroundColor": "#d5d6db",
+            "latex-workshop.view.pdf.color.light.pageBorderColor": "000000"
+          },
+          {
+            "workbench.colorTheme": "Earthbound - Devil's Machine",
+            // "latex-workshop.view.pdf.color.light.pageColorsBackground": "#d5d6db", // Earthbound - Devil's Machine
+            // "latex-workshop.view.pdf.color.dark.backgroundColor": "#040001", // Earthbound - Devil's Machine
+            "latex-workshop.view.pdf.color.light.backgroundColor": "#040001",
+            "latex-workshop.view.pdf.color.light.pageBorderColor": "#ffd6d6"
+          },
+          {
+            "workbench.colorTheme": "Earthbound - Dusty Dunes (Darker)",
+            // "latex-workshop.view.pdf.color.light.pageColorsBackground": "#d5d6db", // Earthbound - Devil's Machine
+            // "latex-workshop.view.pdf.color.dark.backgroundColor": "#140f00", // Earthbound - Devil's Machine
+            "latex-workshop.view.pdf.color.light.backgroundColor": "#140f00",
+            "latex-workshop.view.pdf.color.light.pageBorderColor": "ffe89f"
+          },
+          {
+            "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
+            // "latex-workshop.view.pdf.color.dark.backgroundColor": "#0d1117", // Github Dark Colorblind (Beta)
+            "latex-workshop.view.pdf.color.light.backgroundColor": "#0d1117",
+            "latex-workshop.view.pdf.color.light.pageBorderColor": "#c9e5fd"
+          }
+        ]
+      }
+    ],
+  "latex-workshop.view.pdf.color.dark.backgroundColor": "#808080"
 }

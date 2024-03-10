@@ -1,6 +1,13 @@
-% \documentclass[11pt, draft]{article}
-\documentclass[12pt]{article}
 \newif\ifcompact\compactfalse
+\newif\ifdraft\draftfalse
+% \compacttrue
+% \drafttrue
+
+\ifdraft
+\documentclass[11pt, draft]{article}
+\else
+\documentclass[11pt]{article}
+\fi
 
 % \usepackage{fullpage}  % Set all page margins to 1.5cm
 %\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}  % Flexible and complete interface to document dimensions
@@ -18,9 +25,10 @@
 
 
 \input{header.tex}
-\linespread{1.5}
 \ifcompact
 \IfFileExists{./color.tex}{\input{color.tex}}{}
+\else
+\linespread{1.5}
 \fi
 
 \newtheorem{theorem}{Theorem}[section]

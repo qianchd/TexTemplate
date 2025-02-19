@@ -2,110 +2,41 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/ubuntu
 {
 	"name": "weblatex",
-	"image": "danteev/texlive:latest", // https://github.com/dante-ev/docker-texlive
+	"image": "sanjibsen/weblatex:latest", // https://github.com/sanjib-sen/weblatex-docker
 	"remoteUser": "root", // Do not change this
 	"features": {},
 	"customizations": {
 		"vscode": {
 			"settings": {
-				"cSpell.userWords": [
-					"Adaboost",
-					"ADMM",
-					"argmax",
-					"ASDP",
-					"Benjamini",
-					"Borel",
-					"boundedness",
-					"Boundness",
-					"boxplot",
-					"boxplots",
-					"Bregman",
-					"Chambolle",
-					"Changepoint",
-					"changepoints",
-					"Chengde",
-					"Chernoff's",
-					"Cont'd",
-					"coordinatewise",
-					"Corrollary",
-					"covariate",
-					"covariates",
-					"Cramer",
-					"Dantzig",
-					"Dataset",
-					"datasets",
-					"Doob's",
-					"Esseen",
-					"exchangeablity",
-					"Fenchel",
-					"Frobenius",
-					"glmnet",
-					"hashrate",
-					"heatmap",
-					"Heatmaps",
-					"Hochberg",
-					"Hoeffding",
-					"Hoeffding's",
-					"hyperparameters",
-					"infima",
-					"infimum",
-					"integrable",
-					"invariance",
-					"Kolmogorov",
-					"Kullback",
-					"Leibler",
-					"Lipschitz",
-					"Majorize",
-					"Matlab",
-					"minorant",
-					"misspecified",
-					"MSMM",
-					"MSVM",
-					"multicategory",
-					"multinomial",
-					"multiset",
-					"Nankai",
-					"Nesterov",
-					"NMCD",
-					"nonconvex",
-					"nonnegative",
-					"nonsmooth",
-					"optimality",
-					"orthonormal",
-					"pdflatex",
-					"perceptron",
-					"Qian",
-					"quantile",
-					"rademacher",
-					"repeatly",
-					"RMSMM",
-					"RMSVM",
-					"segmentations",
-					"semidefinite",
-					"Slutsky's",
-					"solardark",
-					"solu",
-					"sparsifying",
-					"subdifferential",
-					"subgaussian",
-					"subgradient",
-					"subgradients",
-					"suboptimal",
-					"subproblem",
-					"subproblems",
-					"subsequence",
-					"supermartingale",
-					"suprema",
-					"Talagrand's",
-					"thresholding",
-					"UMVUE",
-					"vectorization",
-					"vectorizing",
-					"Wilcoxon",
-					"Wilks",
-					"xelatex"
+				"latex-workshop.latex.clean.fileTypes": [
+					"*.aux",
+					"*.bbl",
+					"*.blg",
+					"*.idx",
+					"*.ind",
+					"*.lof",
+					"*.lot",
+					"*.out",
+					"*.toc",
+					"*.acn",
+					"*.acr",
+					"*.alg",
+					"*.glg",
+					"*.glo",
+					"*.gls",
+					"*.fls",
+					"*.log",
+					"*.fdb_latexmk",
+					"*.snm",
+					"*.synctex(busy)",
+					"*.synctex.gz(busy)",
+					"*.nav",
+					"*.vrb",
+					"*.gz", // Added Manually
+					"*.bcf", // Added Manually
+					"*.nlo", // Added Manually
+					"*.run.xml" // Added Manually
 				],
-				"editor.wordWrap": "on",
 				"latex-workshop.latex.tools": [
 					{
 						"name": "xelatex",
@@ -223,51 +154,39 @@
 						]
 					}
 				],
-				// "latex-workshop.view.pdf.viewer":"external",
-				"latex-workshop.view.pdf.ref.viewer": "tabOrBrowser",
-				"latex-workshop.view.pdf.zoom": "page-width",
-				"latex-workshop.latex.clean.fileTypes": [
-					"*.blg",
-					"*.log",
-					"*.idx",
-					"*.ind",
-					"*.lof",
-					"*.lot",
-					"*.toc",
-					"*.acn",
-					"*.acr",
-					"*.alg",
-					"*.glg",
-					"*.glo",
-					"*.gls",
-					"*.ist",
-					"*.fls",
-					"*.snm",
-					"*.nav",
-					"*.fdb_latexmk"
-				],
 				// Edit the following property to change export directory
-				"latex-workshop.latex.outDir": "./PDF",
-				"latex-workshop.latex.autoClean.run": "onFailed",
+				"latex-workshop.latex.outDir": ".",
+				"latex-workshop.latex.autoClean.run": "onBuilt",
 				"latex-workshop.latex.build.forceRecipeUsage": false,
 				"latex-workshop.synctex.afterBuild.enabled": true,
 				"latex-workshop.view.pdf.viewer": "tab",
 				"latex-workshop.latex.clean.subfolder.enabled": true,
 				"latex-workshop.latex.magic.args": [
-					"-output-directory=PDF", // to change the output directory
+					// "-output-directory=PDF", // to change the output directory
 					"%DOC%"
 				],
 				// Remove / comment the next 3 lines to remove dark view for pdf
 				"latex-workshop.view.pdf.color.dark.pageColorsBackground": "#171717", // For Dark Viewwer
-				"latex-workshop.latex.autoBuild.run": "never",
+				"latex-workshop.latex.autoBuild.run": "onFileChange",
 				"latex-workshop.view.pdf.color.dark.pageColorsForeground": "#FFFFFF", // For Dark Viewer
 				"latex-workshop.view.pdf.color.dark.backgroundColor": "#171717", // For Dark Viewer
 				"editor.formatOnSave": true,
-				"editor.scrollbar.verticalScrollbarSize": 6,
 				"latex-workshop.latex.pdfWatch.delay": 500,
-				//"latex-workshop.latex.watch.delay": 500, // Deprecated. See here: https://github.com/sanjib-sen/WebLaTex/issues/8
+ 				//"latex-workshop.latex.watch.delay": 500, // Deprecated. See here: https://github.com/sanjib-sen/WebLaTex/issues/8
 				"latex-workshop.codespaces.portforwarding.openDelay": 20000,
-				"workbench.colorTheme": "Solarized Light+",
+				"grammarly.files.include": [
+					"**/*.tex"
+				],
+				// Remove the following to check .md files with Grammarly.
+				"grammarly.files.exclude": [
+					"**/*.md"
+				],
+				"grammarly.selectors": [
+					{
+						"language": "latex",
+						"scheme": "file"
+					}
+				],
 				"settings.cycle": [
 					{
 						"id": "latexAutoBuild",
@@ -325,19 +244,6 @@
 								"latex-workshop.view.pdf.color.light.backgroundColor": "#fdf6e3"
 							}
 						]
-					}
-				],
-				"grammarly.files.include": [
-					"**/*.tex"
-				],
-				// Remove the following to check .md files with Grammarly.
-				"grammarly.files.exclude": [
-					"**/*.md"
-				],
-				"grammarly.selectors": [
-					{
-						"language": "latex",
-						"scheme": "file"
 					}
 				]
 			},

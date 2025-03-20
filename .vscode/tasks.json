@@ -1,17 +1,27 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
-    "version": "2.0.0",
-    "tasks": [
-      {
-        "label": "setLatexColor",
-        "type": "shell",
-        "command": "./color.sh '${config:latex-workshop.view.pdf.color.light.backgroundColor}' '${config:latex-workshop.view.pdf.color.light.pageBorderColor}'",
-        "group": "test",
-        "presentation": {
-          "reveal": "silent",
-          "panel": "shared"
-        }
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "setLatexColorUbuntu",
+      "type": "shell",
+      "command": "./color.sh '${config:latex-workshop.view.pdf.color.light.backgroundColor}' '${config:latex-workshop.view.pdf.color.light.pageBorderColor}'",
+      "group": "test",
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared"
       }
-    ]
-  }
+    },
+    {
+      "label": "setLatexColor",
+      "type": "shell",
+      "command": "color.bat '${config:latex-workshop.view.pdf.color.light.backgroundColor}' '${config:latex-workshop.view.pdf.color.light.pageBorderColor}'",
+      "group": "test",
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared"
+      }
+    }
+  ]
+}

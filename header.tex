@@ -15,7 +15,7 @@
 \usepackage{booktabs}  %  引入三线表宏包
 
 
-%% fonts 
+%% fonts
 % \usepackage[english]{babel}
 % \usepackage[utf8x]{inputenc}
 % \usepackage[T1]{fontenc}
@@ -43,7 +43,6 @@
 
 % \usepackage{witharrows} % aligned env with arrows
 
-%\usepackage{geometry}
 
 
 %%%% mathbf
@@ -239,23 +238,7 @@
 
 %\newcommand{\epi}[1]{\mathrm{epi}\left(#1\right)}
 \newcommand{\Eproof}{\hfill $\square$}
-\newcommand{\prox}{\mathrm{prox}}
-\newcommand{\proj}{\mathrm{proj}}
-%\newcommand{\argmin}{\mathrm{arg}\!\min}
-\newcommand{\dom}[1]{\mathrm{dom}(#1)}
-\newcommand{\pen}{\mathrm{pen}}
 \newcommand{\zero}[0]{\boldsymbol{0}}
-
-
-%\newcommand{\id}[1]{%
-%   {\mathchoice{\boldsymbol{1}_{\left\{ #1 \right\}}}{\boldsymbol{1}\{#1\}}{\boldsymbol{1}\{#1\}}{\boldsymbol{1}\{#1\}}}
-%}
-
-%\newcommand{\dx}[1][]{%
-%   \ifthenelse{ \equal{#1}{} }
-%      {\ensuremath{\;\mathrm{d}x}}
-%      {\ensuremath{\;\mathrm{d}#1}}
-%}
 
 
 \newcommand{\set}[1]{\{#1\}}
@@ -276,34 +259,9 @@
 \newcommand{\biggabs}[1]{\biggl|#1\biggr|}
 \newcommand{\Biggabs}[1]{\Biggl|#1\Biggr|}
 
-% \newcommand{\set}[1]{
-%    { \mathchoice{\left\{#1\right\}}{\{#1\}}{\{#1\}}{\{#1\}} }
-% }
-%\newcommand{\prob}[1]{
-%    { \mathchoice{\mathbb{P}\left[#1\right]}{\mathbb{P}[#1]}{\mathbb{P}[#1]}{\mathbb{P}[#1]} }
-%}
-
-%\newcommand{\expect}[1]{
-%    { \mathchoice{\mathbb{E}\left[#1\right]}{\mathbb{E}[#1]}{\mathbb{E}[#1]}{\mathbb{E}[#1]} }
-%}
-
-% \newcommand{\norm}[1]{
-%    { \mathchoice{\left\Vert#1\right\Vert}{\Vert#1\Vert}{\Vert#1\Vert}{\Vert#1\Vert} }
-% }
-
-% \newcommand{\abs}[1]{
-%    {\mathchoice{\left\vert#1\right\vert}{\vert#1\vert}{\vert#1\vert}{\vert#1\vert}}
-% }
-
-%\newcommand{\size}[1]{
-%    { \mathchoice{\left\vert#1\right\vert}{\vert#1\vert}{\vert#1\vert}{\vert#1\vert} }
-%}
 
 \newcommand{\size}[1]{\vert#1\vert}
-% \newcommand{\abs}[1]{\vert#1\vert}
-% \newcommand{\norm}[1]{\lVert#1\rVert}
-% \newcommand{\set}[1]{\{#1\}}
-\newcommand{\id}{\boldsymbol{1}}
+\newcommand{\iden}{\boldsymbol{1}}
 
 \newcommand{\dd}{\mathrm{d}}
 \DeclareMathOperator*{\argmin}{\mathrm{arg\,min}}
@@ -312,39 +270,18 @@
 \DeclareMathOperator*{\Cov}{\mathrm{Cov}}
 \DeclareMathOperator*{\TV}{\mathrm{TV}}
 \DeclareMathOperator*{\sign}{\mathrm{sign}}
-\DeclareMathOperator*{\supp}{\mathrm{supp}}
-\DeclareMathOperator*{\op}{\mathrm{op}}
-\DeclareMathOperator*{\tr}{\mathrm{tr}}
-\DeclareMathOperator*{\rel}{\mathrm{r}}
-\DeclareMathOperator*{\diag}{\mathrm{diag}}
 \DeclareMathOperator*{\kl}{\mathrm{KL}}
-%\DeclareMathOperator*{\inf}{inf}
-%\DeclareMathOperator*{\sup}{sup}
 
 % colors
-% \newcommand{\deprecated}[1]{{\color{red}#1}}
 \newcommand{\red}[1]{{\color{red}#1}}
 \newcommand{\blue}[1]{{\color{blue}#1}}
 \newcommand{\fcolor}[2]{{\color{#1}#2}}
 
 % temp command
 \newcommand{\todo}{\textbf{todo: }}
-\newcommand{\supvd}{\sup_{\vbf \in \Scal^{d-1}}}
-\newcommand{\infvd}{\inf_{\vbf \in \Scal^{d-1}}}
-\newcommand{\maxvd}{\max_{\vbf \in \Scal^{d-1}}}
-\newcommand{\minvd}{\min_{\vbf \in \Scal^{d-1}}}
-\newcommand{\zcbf}{\bar{\mathbf{z}}}
-\newcommand{\z}{\mathbf{z}}
-\newcommand{\zt}{\tilde{\mathbf{z}}}
 \newcommand{\ve}{\varepsilon}
 
-\newcommand{\truecps}{\Tcal^\ast}
-\newcommand{\estcps}{\widehat{\Tcal}}
-\newcommand{\cpsset}{\Tcal}
 
-
-
-\usepackage{geometry}
 \definecolor{lightblue}{RGB}{0, 200, 200}
 
 % for todo checklist
@@ -359,6 +296,7 @@
     \setlength{\itemindent}{1pt}
 }
 
+\usepackage{geometry}
 \newcommand{\mypageset}{
     \geometry{
         paperwidth=7.0in,
